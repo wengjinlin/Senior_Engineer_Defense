@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1270" width="1440" height="1270">
+  <style>text { font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "Microsoft JhengHei", sans-serif; }</style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/></marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ea580c"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#059669"/></marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/></marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1440" height="1270" fill="#ffffff"/>
+  <text x="720" y="34" font-size="20" fill="#111827" text-anchor="middle" font-weight="600">harness 运转流程 —— 一个 change 的完整生命周期</text>
+  <text x="720" y="56" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400">五阶段链（蓝）· Mika 编排（橙点火 / 紫信号）· 人工门 ×2 · autopilot 旁路（灰虚）</text>
+  <rect x="60" y="104" width="220" height="1096" rx="0" fill="#fffdf5" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="70" width="220" height="34" rx="6" fill="#ffedd5" stroke="#fdba74" stroke-width="1.2"/>
+  <text x="170.0" y="92" font-size="13" fill="#374151" text-anchor="middle" font-weight="600">人工（发起人 / 审阅人）</text>
+  <rect x="300" y="104" width="460" height="1096" rx="0" fill="#f7faff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="300" y="70" width="460" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="530.0" y="92" font-size="13" fill="#374151" text-anchor="middle" font-weight="600">角色 agent（五阶段链）</text>
+  <rect x="780" y="104" width="200" height="1096" rx="0" fill="#fdfaff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="780" y="70" width="200" height="34" rx="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.2"/>
+  <text x="880.0" y="92" font-size="13" fill="#374151" text-anchor="middle" font-weight="600">Mika 编排</text>
+  <rect x="1010" y="104" width="400" height="1096" rx="0" fill="#fafafa" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="1010" y="70" width="400" height="34" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="1210.0" y="92" font-size="13" fill="#374151" text-anchor="middle" font-weight="600">常驻 autopilot（cron 旁路）</text>
+  <rect x="85" y="130" width="170" height="42" rx="8" fill="#ffedd5" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="170.0" y="155.5" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">发起人 · chat 澄清</text>
+  <rect x="75" y="310" width="190" height="64" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+  <text x="170.0" y="332" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">人工门 G1</text>
+  <text x="170.0" y="348" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">人审四工件</text>
+  <text x="170.0" y="363" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">人工执行 DDL / 权限 SQL</text>
+  <rect x="75" y="946" width="190" height="64" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+  <text x="170.0" y="968" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">人工门 G2</text>
+  <text x="170.0" y="984" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">人审合并 MR</text>
+  <text x="170.0" y="999" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">（change / doc-audit / retro）</text>
+  <rect x="330" y="130" width="400" height="42" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="530.0" y="155.5" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">PM · chat 澄清（双向 explore）→ 建 change issue</text>
+  <rect x="330" y="240" width="400" height="56" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="530.0" y="262" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">stage 1 · PM：四工件 + 三件套</text>
+  <text x="530.0" y="278" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">proposal→specs→design→api(+ddl) · auth-resource.sql</text>
+  <rect x="330" y="460" width="400" height="46" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="530.0" y="487.5" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">stage 2 · Tech-Lead：tasks.md + DAG + plan.md</text>
+  <rect x="330" y="824" width="400" height="46" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="530.0" y="846" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">stage 4 · Tester：测试 + 浏览器 QA</text>
+  <text x="530.0" y="862" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">browser-qa → test-report.md</text>
+  <rect x="330" y="888" width="400" height="46" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="530.0" y="910" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">stage 5 · DevOps：归档 + tag + CHANGELOG</text>
+  <text x="530.0" y="926" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">GitLab API 建 MR（Closes {issue}）</text>
+  <rect x="330" y="1024" width="400" height="46" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+  <text x="530.0" y="1046" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">合并 → Closes {issue} 自动关主 issue</text>
+  <text x="530.0" y="1062" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">lesson 沉淀 · 文档随行更新</text>
+  <rect x="316" y="596" width="428" height="196" rx="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="6,4"/>
+  <text x="530" y="612" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="600">task 微循环 ×N（stage 3 · Developer ⇄ Reviewer）</text>
+  <rect x="344" y="624" width="372" height="50" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="530.0" y="646" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Developer · TDD 编码</text>
+  <text x="530.0" y="662" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">executing-plans · db-schema-export</text>
+  <rect x="344" y="692" width="372" height="46" rx="8" fill="#f3f4f6" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="530.0" y="714" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Reviewer · 只读审查 4/10 关</text>
+  <text x="530.0" y="730" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">review-report-{task-N}</text>
+  <polygon points="530,750 574,773 530,796 486,773" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="530" y="777" font-size="11" fill="#111827" text-anchor="middle" font-weight="400">通过？</text>
+  <rect x="800" y="172" width="160" height="56" rx="8" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="880.0" y="194" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">Mika · 守门校验</text>
+  <text x="880.0" y="210" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">五要素 ✗退回 / ✓登记</text>
+  <rect x="800" y="388" width="160" height="50" rx="8" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="880.0" y="410" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">Mika · 置 metadata</text>
+  <text x="880.0" y="426" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">ddl_done · role_bind</text>
+  <rect x="800" y="528" width="160" height="60" rx="8" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="880.0" y="550" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">Mika · 建 task 子 issue</text>
+  <text x="880.0" y="566" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">逐 task 点火 Developer</text>
+  <rect x="800" y="700" width="160" height="80" rx="8" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="880.0" y="722" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">Mika · 审查路由</text>
+  <text x="880.0" y="738" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">接收完成信号</text>
+  <text x="880.0" y="753" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">点名 Reviewer</text>
+  <text x="880.0" y="768" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">点火 stage 4 / 5</text>
+  <rect x="1030" y="150" width="360" height="110" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="1210.0" y="172" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">兜底巡检 autopilot</text>
+  <text x="1210.0" y="188" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">assignee Mika · */30 min（cron）</text>
+  <text x="1210.0" y="203" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">巡检全部 issue：挂起路由 · 卡点提醒</text>
+  <text x="1210.0" y="218" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">失败断点重路由 · 连败≥2 停止@用户</text>
+  <text x="1210.0" y="233" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">连打回≥2 → 提炼 lesson</text>
+  <rect x="1030" y="300" width="360" height="96" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="1210.0" y="322" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">结构文档对账 autopilot</text>
+  <text x="1210.0" y="338" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">DocKeeper · 周一 08:17</text>
+  <text x="1210.0" y="353" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">调 aicoding-harness-audit</text>
+  <text x="1210.0" y="368" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">代码 diff → doc-audit MR · 无差异静默</text>
+  <rect x="1030" y="430" width="360" height="110" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="1210.0" y="452" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">人工测试复盘 autopilot</text>
+  <text x="1210.0" y="468" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">DocKeeper · 周一 08:23</text>
+  <text x="1210.0" y="483" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">调 aicoding-human-test-retro</text>
+  <text x="1210.0" y="498" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">逐问题四源归因 → 期报 + lesson 草案</text>
+  <text x="1210.0" y="513" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">retro MR · 人审合并即决策</text>
+  <path d="M 255,151 L 326,151" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#blue)"/>
+  <text x="292" y="143" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">① 澄清</text>
+  <path d="M 530,172 L 530,200 L 796,200" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#purple)"/>
+  <text x="665" y="193" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">编排信号 @Mika</text>
+  <path d="M 880,228 L 880,268 L 734,268" fill="none" stroke="#ea580c" stroke-width="1.8" marker-end="url(#orange)"/>
+  <text x="807" y="261" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">点火 stage 1</text>
+  <path d="M 400,296 L 400,342 L 269,342" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#blue)"/>
+  <text x="334" y="334" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">提交人审</text>
+  <path d="M 170,374 L 170,413 L 796,413" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#purple)"/>
+  <text x="480" y="406" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">执行回执 @Mika（ddl_done 等）</text>
+  <path d="M 880,438 L 880,483 L 734,483" fill="none" stroke="#ea580c" stroke-width="1.8" marker-end="url(#orange)"/>
+  <text x="807" y="476" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">点火 stage 2</text>
+  <path d="M 530,506 L 530,558 L 796,558" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#purple)"/>
+  <text x="660" y="550" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">完成信号</text>
+  <path d="M 880,588 L 880,650 L 748,650" fill="none" stroke="#ea580c" stroke-width="1.8" marker-end="url(#orange)"/>
+  <text x="814" y="643" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">点火 stage 3</text>
+  <path d="M 530,674 L 530,690" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#blue)"/>
+  <text x="542" y="686" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">完成信号</text>
+  <path d="M 530,738 L 530,748" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#blue)"/>
+  <path d="M 486,773 L 328,773 L 328,649 L 340,649" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#red)"/>
+  <text x="407" y="788" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">打回返工</text>
+  <path d="M 530,796 L 530,820" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#blue)"/>
+  <text x="542" y="812" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">全部 task 通过</text>
+  <path d="M 880,780 L 880,909" fill="none" stroke="#ea580c" stroke-width="1.8"/>
+  <path d="M 880,845 L 736,845" fill="none" stroke="#ea580c" stroke-width="1.8" marker-end="url(#orange)"/>
+  <text x="808" y="838" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">点火 stage 4</text>
+  <path d="M 880,909 L 736,909" fill="none" stroke="#ea580c" stroke-width="1.8" marker-end="url(#orange)"/>
+  <text x="808" y="902" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">点火 stage 5</text>
+  <path d="M 530,870 L 530,886" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#blue)"/>
+  <path d="M 330,911 L 300,911 L 300,978 L 269,978" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#blue)"/>
+  <text x="308" y="950" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">MR 待审</text>
+  <path d="M 170,1010 L 170,1046 L 326,1046" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#blue)"/>
+  <text x="249" y="1040" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">合并</text>
+  <path d="M 960,200 L 1026,200" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#gray)"/>
+  <text x="993" y="192" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">巡检兜底</text>
+  <path d="M 1210,540 L 1210,1090 L 172,1090 L 172,1014" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#gray)"/>
+  <text x="920" y="1082" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">doc-audit / retro MR → 人审合并</text>
+  <line x1="60" y1="1232" x2="90" y2="1232" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <text x="98" y="1236" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">蓝 · 主流程 / 工件流</text>
+  <line x1="258.5" y1="1232" x2="288.5" y2="1232" stroke="#ea580c" stroke-width="1.8" marker-end="url(#arrow-orange)"/>
+  <text x="296.5" y="1236" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">橙 · Mika 点火 / 路由</text>
+  <line x1="467.5" y1="1232" x2="497.5" y2="1232" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arrow-purple)"/>
+  <text x="505.5" y="1236" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">紫虚线 · 编排信号 / 回执</text>
+  <line x1="688.0" y1="1232" x2="718.0" y2="1232" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+  <text x="726.0" y="1236" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">红 · 审查打回</text>
+  <line x1="845.0" y1="1232" x2="875.0" y2="1232" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arrow-gray)"/>
+  <text x="883.0" y="1236" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">灰虚线 · autopilot 旁路</text>
+</svg>

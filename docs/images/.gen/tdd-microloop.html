@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+body { margin:0; padding:0; background:#ffffff; }</style></head>
+<body><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 810" width="1240" height="810">
+  <style>text { font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "Microsoft JhengHei", sans-serif; }</style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/></marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ea580c"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#059669"/></marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/></marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1240" height="810" fill="#ffffff"/>
+  <text x="620.0" y="32" font-size="19" fill="#111827" text-anchor="middle" font-weight="600">TDD 实现 · task 微循环与三道质量关</text>
+  <text x="620.0" y="56" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="400">不写测试不让过（strict 门禁）· 异模型只读防共谋 · 分级测试防不足与过度</text>
+  <rect x="90" y="104" width="260" height="128" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="220" y="128" font-size="12.5" fill="#9a3412" text-anchor="middle" font-weight="600">前置约束 · DDL 人工门先行</text>
+  <text x="220" y="150" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">stage &lt; 2 被 block —— 表结构必须先存在</text>
+  <text x="220" y="168" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">测试依赖真实库表，TDD 才有可靠对象</text>
+  <text x="220" y="186" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">人工执行 ddl 后回执 → Mika 置</text>
+  <text x="220" y="204" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">metadata ddl_done 解锁 stage 3</text>
+  <path d="M 350,168 L 396,168" fill="none" stroke="#ea580c" stroke-width="1.8" marker-end="url(#orange)"/>
+  <rect x="349" y="147" width="88" height="15" fill="#ffffff" opacity="0.9"/>
+  <text x="373" y="158" font-size="10" fill="#ea580c" text-anchor="middle" font-weight="400">解锁点火</text>
+  <rect x="360" y="96" width="700" height="470" rx="8" fill="none" stroke="#9ca3af" stroke-width="1.3" stroke-dasharray="8,4"/>
+  <rect x="366" y="87" width="196" height="18" rx="4" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1"/>
+  <text x="464.0" y="100" font-size="11" fill="#374151" text-anchor="middle" font-weight="600">loop · task 微循环 ×N（stage 3 内）</text>
+  <rect x="430" y="116" width="200" height="50" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="530" y="146" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Mika 点火 task#N</text>
+  <path d="M 530,166 L 530,204" fill="none" stroke="#ea580c" stroke-width="1.8" marker-end="url(#orange)"/>
+  <rect x="400" y="208" width="320" height="186" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="560" y="234" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Developer · 单条目 TDD</text>
+  <rect x="418" y="250" width="86" height="64" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="461" y="270" font-size="11.5" fill="#111827" text-anchor="middle" font-weight="600">红 RED</text>
+  <text x="461" y="288" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">先写测试</text>
+  <text x="461" y="304" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">必须失败</text>
+  <line x1="506" y1="282" x2="517" y2="282" stroke="#059669" stroke-width="1.6"/>
+  <polygon points="517,276 524,282 517,288" fill="#059669"/>
+  <rect x="524" y="250" width="86" height="64" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="567" y="270" font-size="11.5" fill="#111827" text-anchor="middle" font-weight="600">绿 GREEN</text>
+  <text x="567" y="288" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">最小实现</text>
+  <text x="567" y="304" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">恰好通过</text>
+  <line x1="612" y1="282" x2="623" y2="282" stroke="#059669" stroke-width="1.6"/>
+  <polygon points="623,276 630,282 623,288" fill="#059669"/>
+  <rect x="630" y="250" width="86" height="64" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="673" y="270" font-size="11.5" fill="#111827" text-anchor="middle" font-weight="600">重构</text>
+  <text x="673" y="288" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">改善结构</text>
+  <text x="673" y="304" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">不改行为</text>
+  <text x="560" y="340" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">技能挂载：executing-plans ·</text>
+  <text x="560" y="356" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">test-driven-development · systematic-debugging</text>
+  <text x="560" y="378" font-size="11" fill="#059669" text-anchor="middle" font-weight="600">plan.md 单条目推进 · 禁止跨条目</text>
+  <path d="M 720,290 L 794,290" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#purple)"/>
+  <text x="757" y="280" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="400">完成评论</text>
+  <text x="757" y="304" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="400">【编排信号】</text>
+  <rect x="800" y="240" width="300" height="132" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="950" y="266" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Reviewer · 只读审查（异模型）</text>
+  <text x="950" y="290" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">无写权限 —— 想放水也没有通道</text>
+  <text x="950" y="310" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">与 Developer 异模型，防「AI 审 AI」共谋</text>
+  <text x="950" y="330" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">quick 4 关 / full 10 关（REVIEW.md 清单）</text>
+  <text x="950" y="350" font-size="11" fill="#2563eb" text-anchor="middle" font-weight="400">产 review-report-{task-N}.md</text>
+  <path d="M 950,372 L 950,420" fill="none" stroke="#ea580c" stroke-width="1.8" marker-end="url(#orange)"/>
+  <polygon points="950,424 1030,462 950,500 870,462" fill="#fefce8" stroke="#eab308" stroke-width="1.5"/>
+  <text x="950" y="458" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">审查判定</text>
+  <text x="950" y="476" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="400">过 / 不过</text>
+  <path d="M 1030,462 L 1076,462" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#green)"/>
+  <rect x="1080" y="438" width="130" height="48" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="1145" y="458" font-size="12" fill="#059669" text-anchor="middle" font-weight="600">点火下一 task</text>
+  <text x="1145" y="476" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="400">循环推进</text>
+  <path d="M 950,500 L 950,533 L 560,533 L 560,398" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#red)"/>
+  <text x="755" y="525" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="400">红牌打回 · 逐条列问题项 · 计打回次数（连打回 ≥2 → Mika 提炼 lesson）</text>
+  <rect x="90" y="610" width="350" height="116" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="265" y="636" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">① TDD 强制（strict）</text>
+  <text x="265" y="662" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">测试从「可选项」变为「门禁」</text>
+  <text x="265" y="682" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">不写测试，编码无法通过</text>
+  <text x="265" y="702" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">红-绿-重构循环完整留痕</text>
+  <rect x="470" y="610" width="350" height="116" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="645" y="636" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">② 异模型 + 只读</text>
+  <text x="645" y="662" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">审查者无写权限、异模型家族</text>
+  <text x="645" y="682" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">专为 AI 代码设计审查项：</text>
+  <text x="645" y="702" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">LLM 信任边界 · AI 冗余物</text>
+  <rect x="850" y="610" width="350" height="116" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="1025" y="636" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">③ 分级测试</text>
+  <text x="1025" y="662" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">Quick / Standard / Exhaustive</text>
+  <text x="1025" y="682" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">浏览器 QA 报告式（不改码）</text>
+  <text x="1025" y="702" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">防覆盖不足，也防过度测试</text>
+  <line x1="150" y1="770" x2="178" y2="770" stroke="#ea580c" stroke-width="1.8" marker-end="url(#arrow-orange)"/>
+  <text x="186" y="774" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">橙 · 点火/推进</text>
+  <line x1="305" y1="770" x2="333" y2="770" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#arrow-purple)"/>
+  <text x="341" y="774" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">紫虚 · 编排信号</text>
+  <line x1="465" y1="770" x2="493" y2="770" stroke="#059669" stroke-width="1.8" marker-end="url(#arrow-green)"/>
+  <text x="501" y="774" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">绿 · 通过/TDD 步进</text>
+  <line x1="644" y1="770" x2="672" y2="770" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#arrow-red)"/>
+  <text x="680" y="774" font-size="11" fill="#6b7280" text-anchor="start" font-weight="400">红虚 · 打回</text>
+</svg></body></html>

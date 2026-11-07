@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 900" width="1420" height="900">
+  <style>text { font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "Microsoft JhengHei", sans-serif; }</style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/></marker>
+  </defs>
+  <rect width="1420" height="900" fill="#ffffff"/>
+  <text x="710" y="34" font-size="20" fill="#111827" text-anchor="middle" font-weight="600">目标仓库 harness 结构图 —— agent 的制度与字典</text>
+  <text x="710" y="56" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400">三大治理文档（红线）+ docs/ 字典体系（唯一权威源）+ 机制硬约束 + 一次性建设 + 双重防漂移</text>
+  <text x="56" y="84" font-size="12" fill="#374151" text-anchor="start" font-weight="600">① 治理文档（红线层）—— 所有 agent 开工必读，违反即打回</text>
+  <rect x="56" y="96" width="344" height="76" rx="8" fill="#ffedd5" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="228.0" y="120" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">CLAUDE.md · 项目宪法</text>
+  <text x="228.0" y="139" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">15 节红线：定位/模块表/构建/TDD/分层</text>
+  <text x="228.0" y="155" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">命名/保护路径/响应格式/日志——覆盖全仓库</text>
+  <rect x="413" y="96" width="344" height="76" rx="8" fill="#ffedd5" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="585.0" y="120" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">AGENTS.md · 协作总纲</text>
+  <text x="585.0" y="139" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">角色速查 · Git 策略 · OpenSpec 工件结构</text>
+  <text x="585.0" y="155" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">变更联动矩阵 · lessons 读写矩阵</text>
+  <rect x="770" y="96" width="344" height="76" rx="8" fill="#ffedd5" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="942.0" y="120" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">REVIEW.md · 审查关卡</text>
+  <text x="942.0" y="139" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">quick 4 关：spec-align / risk / lesson / archive</text>
+  <text x="942.0" y="155" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">full 10 关 · protected 路径加人工复核</text>
+  <text x="56" y="196" font-size="12" fill="#374151" text-anchor="start" font-weight="600">② docs/ 字典体系（唯一权威源）—— docs/index.md 是唯一入口</text>
+  <rect x="56" y="208" width="1058" height="44" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="585" y="235" font-size="12" fill="#1e40af" text-anchor="middle" font-weight="600">docs/index.md —— 目录导航 · 按角色必读顺序 · 维护规则 · 对账基线表（DocKeeper 维护）</text>
+  <rect x="56" y="262" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="228.0" y="286" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">architecture/index.md</text>
+  <text x="228.0" y="305" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">模块定位字典：业务域↔模块↔表前缀</text>
+  <text x="228.0" y="321" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">高风险区 / ADR / 技术债 · 全角色</text>
+  <rect x="413" y="262" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="585.0" y="286" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">architecture/implicit-contracts.md</text>
+  <text x="585.0" y="305" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">隐性约定：口头约定 / 历史包袱</text>
+  <text x="585.0" y="321" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">代码看不出来的规则 · 全角色</text>
+  <rect x="770" y="262" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="942.0" y="286" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">product/index.md</text>
+  <text x="942.0" y="305" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">业务域划分 / 术语表 / 状态机</text>
+  <text x="942.0" y="321" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">业务校验铁律 · PM 为主</text>
+  <rect x="56" y="352" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="228.0" y="376" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">database/（index + tables/）</text>
+  <text x="228.0" y="395" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">全库表清单 + 每表字段详情</text>
+  <text x="228.0" y="411" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">唯一生成通道 aicoding-db-schema-export</text>
+  <rect x="413" y="352" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="585.0" y="376" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">standards/（api · database · testing）</text>
+  <text x="585.0" y="395" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">三篇详单 + 评审检查清单</text>
+  <text x="585.0" y="411" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">宪法红线与详单两向引用</text>
+  <rect x="770" y="352" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="942.0" y="376" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">templates/design-review-template.md</text>
+  <text x="942.0" y="395" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">前端设计人审模板</text>
+  <text x="942.0" y="411" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">逐字段选型 + 偏离声明 · PM/Reviewer</text>
+  <rect x="56" y="442" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="228.0" y="466" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">help/（能力清单 + 7 篇能力文档）</text>
+  <text x="228.0" y="485" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">平台能力使用指南（po/s3/kafka…）</text>
+  <text x="228.0" y="501" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">涉平台集成需求必读 · 全角色</text>
+  <rect x="413" y="442" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="585.0" y="466" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">lessons/（index + {Role}.md）</text>
+  <text x="585.0" y="485" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">错题本：日期+change-id+❌/✅ 对照</text>
+  <text x="585.0" y="501" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">开工必读视同本级约束</text>
+  <rect x="770" y="442" width="344" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="942.0" y="466" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">human-test-reports/</text>
+  <text x="942.0" y="485" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">人工测试报告（日期-分支名.md）</text>
+  <text x="942.0" y="501" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">人类维护 · agent 只读 · 复盘归档</text>
+  <text x="56" y="548" font-size="12" fill="#374151" text-anchor="start" font-weight="600">③ 机制层（硬约束 —— 不靠自觉靠拦截）</text>
+  <rect x="56" y="560" width="344" height="88" rx="8" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="228.0" y="584" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">.claude/hooks/guard_write.py</text>
+  <text x="228.0" y="603" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">PreToolUse 钩子：保护路径写入直接 block</text>
+  <text x="228.0" y="619" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">默认 application*.yml / db / sql / pom</text>
+  <text x="228.0" y="635" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">变更须 design.md 声明 + Reviewer 过审</text>
+  <rect x="413" y="560" width="344" height="88" rx="8" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="585.0" y="584" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">openspec/config.yaml</text>
+  <text x="585.0" y="603" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">spec-driven 工件链强制顺序</text>
+  <text x="585.0" y="619" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">tdd_enforcement / ordering: strict</text>
+  <text x="585.0" y="635" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">model_routing_hints · protected_paths</text>
+  <rect x="770" y="560" width="344" height="88" rx="8" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="942.0" y="584" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Git 流（唯一写通道）</text>
+  <text x="942.0" y="603" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">feature/{change-id} → MR → 人审合并</text>
+  <text x="942.0" y="619" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">禁直推保护分支</text>
+  <text x="942.0" y="635" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">commit 后立即 push（跨 runtime 可见）</text>
+  <text x="56" y="672" font-size="12" fill="#374151" text-anchor="start" font-weight="600">④ 建设流程（aicoding-harness-bootstrap · chat 内单会话执行 · 一次性）</text>
+  <rect x="56" y="684" width="198" height="100" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="155.0" y="708" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">① 前置</text>
+  <text x="155.0" y="727" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">checkout · 建分支</text>
+  <text x="155.0" y="743" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">已有文档 → 对齐模式</text>
+  <text x="155.0" y="759" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">数据库预检（密码两路）</text>
+  <rect x="269" y="684" width="198" height="100" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="368.0" y="708" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">② 铺 skeleton</text>
+  <text x="368.0" y="727" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">20+ 文件原样拷入</text>
+  <text x="368.0" y="743" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">含模板与 {{占位符}}</text>
+  <text x="368.0" y="759" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">结构权威源</text>
+  <rect x="482" y="684" width="198" height="100" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="581.0" y="708" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">③ 代码分析填充</text>
+  <text x="581.0" y="727" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">逐条消灭 {{占位符}}</text>
+  <text x="581.0" y="743" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">每条须有代码证据</text>
+  <text x="581.0" y="759" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">库文档走专用 skill</text>
+  <rect x="695" y="684" width="198" height="100" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="794.0" y="708" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">④ hook 自测</text>
+  <text x="794.0" y="727" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">guard_write.py 落位</text>
+  <text x="794.0" y="743" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">写保护路径应被 block</text>
+  <text x="794.0" y="759" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">普通路径应放行</text>
+  <rect x="908" y="684" width="198" height="100" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="1007.0" y="708" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">⑤ 交付</text>
+  <text x="1007.0" y="727" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">feature/init-harness</text>
+  <text x="1007.0" y="743" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">占位未清不得 commit</text>
+  <text x="1007.0" y="759" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">人审 MR + 审宪法</text>
+  <path d="M 254,734 L 264,734" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 467,734 L 477,734" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 680,734 L 690,734" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 893,734 L 903,734" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <text x="56" y="808" font-size="12" fill="#374151" text-anchor="start" font-weight="600">⑤ 文档漂移双重防守</text>
+  <rect x="56" y="820" width="520" height="64" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="316.0" y="844" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">第一道 · 变更随行（主防线）</text>
+  <text x="316.0" y="863" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">代码结构变更 → 同一 change 内更新文档</text>
+  <text x="316.0" y="879" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">Tech-Lead 显式排 task · 禁止事后补文档</text>
+  <rect x="594" y="820" width="520" height="64" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="854.0" y="844" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">第二道 · 周级对账（兜底）</text>
+  <text x="854.0" y="863" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">DocKeeper 周一 autopilot · diff 基线以来变更</text>
+  <text x="854.0" y="879" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">doc-audit MR · 基线表随 MR 前移 · 无差异静默</text>
+  <rect x="1160" y="88" width="250" height="770" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="1285" y="112" font-size="13" fill="#374151" text-anchor="middle" font-weight="600">角色必读路由</text>
+  <rect x="1172" y="126" width="226" height="86" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="1285" y="146" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">PM</text>
+  <text x="1285" y="164" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">product → architecture</text>
+  <text x="1285" y="179" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">→ database → implicit-contracts</text>
+  <text x="1285" y="194" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">（+ help，涉及时）</text>
+  <rect x="1172" y="224" width="226" height="86" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="1285" y="244" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">Tech-Lead</text>
+  <text x="1285" y="262" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">architecture/index</text>
+  <text x="1285" y="277" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">→ lessons 全部</text>
+  <rect x="1172" y="322" width="226" height="86" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="1285" y="342" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">Developer</text>
+  <text x="1285" y="360" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">architecture（代码落位）</text>
+  <text x="1285" y="375" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">→ standards 对应篇</text>
+  <text x="1285" y="390" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">→ lessons/Developer</text>
+  <rect x="1172" y="420" width="226" height="86" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="1285" y="440" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">Tester</text>
+  <text x="1285" y="458" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">standards/testing</text>
+  <text x="1285" y="473" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">→ lessons/Tester</text>
+  <rect x="1172" y="518" width="226" height="86" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="1285" y="538" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">Reviewer</text>
+  <text x="1285" y="556" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">standards 全部</text>
+  <text x="1285" y="571" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">→ lessons 全部</text>
+  <rect x="1172" y="616" width="226" height="86" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="1285" y="636" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">DevOps</text>
+  <text x="1285" y="654" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">lessons 全部</text>
+  <rect x="1172" y="714" width="226" height="66" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="1285" y="736" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">对齐模式</text>
+  <text x="1285" y="752" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">已有 CLAUDE.md 的仓库：</text>
+  <text x="1285" y="766" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">对照骨架补缺节，不覆盖定制</text>
+  <rect x="1172" y="788" width="226" height="56" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="1285" y="808" font-size="12" fill="#111827" text-anchor="middle" font-weight="600">skeleton/ = 结构权威源</text>
+  <text x="1285" y="824" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">章节变更回写；内容演进走 MR</text>
+  <text x="1285" y="840" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400">（周级对账兜漂移）</text>
+</svg>

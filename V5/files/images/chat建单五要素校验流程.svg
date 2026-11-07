@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#475569"/>
+    </marker>
+    <marker id="arrR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b91c1c"/>
+    </marker>
+  </defs>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">chat 建单守门五要素校验流程（人机界面框架示意）</text>
+
+  <!-- 用户输入 -->
+  <rect x="40" y="55" width="180" height="52" rx="8" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="130" y="76" text-anchor="middle" font-size="13" fill="#0c4a6e">用户：chat 一句话</text>
+  <text x="130" y="95" text-anchor="middle" font-size="12" fill="#0c4a6e">（自然语言需求）</text>
+
+  <line x1="220" y1="81" x2="285" y2="81" stroke="#475569" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- PM 澄清 -->
+  <rect x="287" y="55" width="190" height="52" rx="8" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="382" y="76" text-anchor="middle" font-size="13" fill="#4c1d95">PM agent 双向澄清</text>
+  <text x="382" y="95" text-anchor="middle" font-size="12" fill="#4c1d95">（chat 问答补齐信息）</text>
+
+  <line x1="477" y1="81" x2="542" y2="81" stroke="#475569" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- 守门校验 -->
+  <rect x="544" y="46" width="190" height="70" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="639" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#78350f">建单守门校验</text>
+  <text x="639" y="92" text-anchor="middle" font-size="12" fill="#78350f">五要素逐项检查</text>
+
+  <!-- 五要素清单 -->
+  <rect x="330" y="150" width="430" height="150" rx="10" fill="#f8fafc" stroke="#475569"/>
+  <text x="545" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">建单五要素（缺一样打回，不入流程）</text>
+  <text x="352" y="202" font-size="12.5" fill="#1e293b">① change-id（变更唯一标识）</text>
+  <text x="352" y="225" font-size="12.5" fill="#1e293b">② 五阶段链（澄清建单→四工件→拆解→编码→测试归档）</text>
+  <text x="352" y="248" font-size="12.5" fill="#1e293b">③ 人工门段（G1 审设计+执行 DDL / G2 审 MR）</text>
+  <text x="352" y="271" font-size="12.5" fill="#1e293b">④ 验收点（可验证的完成判据）</text>
+  <text x="352" y="294" font-size="12.5" fill="#1e293b">⑤ 澄清结论（问答沉淀的需求确认记录）</text>
+
+  <line x1="639" y1="116" x2="600" y2="148" stroke="#475569" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <!-- 分支：缺要素 -->
+  <line x1="544" y1="95" x2="240" y2="175" stroke="#b91c1c" stroke-width="1.6" marker-end="url(#arrR)"/>
+  <rect x="60" y="160" width="215" height="58" rx="9" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.6"/>
+  <text x="167" y="183" text-anchor="middle" font-size="13" font-weight="bold" fill="#7f1d1d">❌ 打回澄清</text>
+  <text x="167" y="203" text-anchor="middle" font-size="12" fill="#7f1d1d">指明缺失要素，回到 chat 问答</text>
+  <path d="M 167 160 C 130 120 155 95 220 80" fill="none" stroke="#b91c1c" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#arrR)"/>
+  <text x="112" y="140" font-size="11" fill="#b91c1c">补充后重报</text>
+
+  <!-- 分支：齐备 -->
+  <line x1="639" y1="300" x2="639" y2="345" stroke="#475569" stroke-width="1.6" marker-end="url(#arr)"/>
+  <rect x="500" y="348" width="278" height="56" rx="9" fill="#dcfce7" stroke="#15803d" stroke-width="1.6"/>
+  <text x="639" y="371" text-anchor="middle" font-size="13" font-weight="bold" fill="#14532d">✅ 建 issue · 入五阶段链</text>
+  <text x="639" y="391" text-anchor="middle" font-size="12" fill="#14532d">stage 1 起步，编排信号驱动角色接力</text>
+
+  <!-- 说明注记 -->
+  <rect x="40" y="348" width="420" height="100" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="56" y="372" font-size="12" font-weight="bold" fill="#334155">界面交互规则要点</text>
+  <text x="56" y="393" font-size="11.5" fill="#475569">· 人只在 chat 说话与两个人工门出现，其余看板可视</text>
+  <text x="56" y="412" font-size="11.5" fill="#475569">· agent 每阶段完成发标准格式编排信号评论 @Mika 秒级接力</text>
+  <text x="56" y="431" font-size="11.5" fill="#475569">· 守门在 stage 1 入口一次性完成，杜绝"边做边补需求"</text>
+</svg>
