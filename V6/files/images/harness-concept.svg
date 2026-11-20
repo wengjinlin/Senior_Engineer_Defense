@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 720" width="1360" height="720">
+  <style>text { font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "Microsoft JhengHei", sans-serif; }</style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/></marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ea580c"/></marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="1360" height="720" fill="#ffffff"/>
+  <text x="680" y="34" font-size="20" fill="#111827" text-anchor="middle" font-weight="600">一张图看懂 sunny-multica harness</text>
+  <text x="680" y="56" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400">一条需求流水线（上） + 三个幕后支撑（中） + 三条铁律（下）· 人只在橙色两站出现</text>
+  <rect x="40" y="100" width="1280" height="162" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="62" y="124" width="132" height="104" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="128.0" y="150" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">PM · 产品</text>
+  <text x="128.0" y="169" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">chat 澄清需求</text>
+  <text x="128.0" y="185" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">写设计四件套</text>
+  <text x="128.0" y="201" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">+ 权限 SQL 草案</text>
+  <rect x="218" y="124" width="132" height="104" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+  <text x="284.0" y="150" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">人工门 ①</text>
+  <text x="284.0" y="169" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">人审设计四件套</text>
+  <text x="284.0" y="185" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">亲手执行</text>
+  <text x="284.0" y="201" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">数据库脚本</text>
+  <rect x="374" y="124" width="132" height="104" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="440.0" y="150" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Tech-Lead</text>
+  <text x="440.0" y="169" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">拆任务 · 排依赖</text>
+  <text x="440.0" y="185" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">产出 plan.md</text>
+  <text x="440.0" y="201" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">（写作计划 SOP）</text>
+  <rect x="530" y="124" width="132" height="104" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="596.0" y="150" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Dev ⇄ Rev</text>
+  <text x="596.0" y="169" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">程序员 TDD 写码</text>
+  <text x="596.0" y="185" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">审查员只读把关</text>
+  <text x="596.0" y="201" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">不过 → 打回返工</text>
+  <rect x="686" y="124" width="132" height="104" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="752.0" y="150" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">Tester</text>
+  <text x="752.0" y="169" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">跑集成/边界测试</text>
+  <text x="752.0" y="185" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">浏览器页面 QA</text>
+  <text x="752.0" y="201" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">出测试报告</text>
+  <rect x="842" y="124" width="132" height="104" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="908.0" y="150" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">DevOps</text>
+  <text x="908.0" y="169" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">归档 · 打 tag</text>
+  <text x="908.0" y="185" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">调 GitLab API</text>
+  <text x="908.0" y="201" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">建 MR 待审</text>
+  <rect x="998" y="124" width="132" height="104" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+  <text x="1064.0" y="150" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">人工门 ②</text>
+  <text x="1064.0" y="169" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">人审 MR</text>
+  <text x="1064.0" y="185" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">点合并</text>
+  <text x="1064.0" y="201" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">（上线拍板）</text>
+  <rect x="1154" y="124" width="132" height="104" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+  <text x="1220.0" y="150" font-size="13" fill="#111827" text-anchor="middle" font-weight="600">完成</text>
+  <text x="1220.0" y="169" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">MR 合并后</text>
+  <text x="1220.0" y="185" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">issue 自动关闭</text>
+  <text x="1220.0" y="201" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">经验沉淀归档</text>
+  <path d="M 196,176 L 216,176" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 352,176 L 372,176" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 508,176 L 528,176" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 664,176 L 684,176" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 820,176 L 840,176" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 976,176 L 996,176" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 1132,176 L 1152,176" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <path d="M 594,228 C 562,254 530,254 508,230" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrow-red)"/>
+  <text x="550" y="258" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="400">打回返工</text>
+  <path d="M 255,316 L 255,268" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-gray)"/>
+  <path d="M 695,316 L 695,268" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-gray)"/>
+  <path d="M 1135,316 L 1135,268" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-gray)"/>
+  <rect x="60" y="316" width="390" height="230" rx="10" fill="#faf5ff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="255" y="344" font-size="14" fill="#6d28d9" text-anchor="middle" font-weight="600">Mika · 调度台（编排 agent）</text>
+  <text x="80" y="370" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· 流水线的「交警」：谁完成了、下一棒给谁，它说了算</text>
+  <text x="80" y="396" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· 角色完成时的评论 = 编排信号，秒级唤醒接力</text>
+  <text x="80" y="422" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· （cron 每 30 分钟巡逻一遍兜底，不怕漏单）</text>
+  <text x="80" y="448" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· 建单守门：change-id / 阶段链 / 人工门 / 验收点</text>
+  <text x="80" y="474" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· 失败自动重路由；连败 ≥2 停手喊人</text>
+  <text x="80" y="500" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· 连打回 ≥2 自动提炼教训（lesson）入库</text>
+  <rect x="500" y="316" width="390" height="230" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="695" y="344" font-size="14" fill="#047857" text-anchor="middle" font-weight="600">技能 · 工具箱（挂在角色身上）</text>
+  <text x="520" y="370" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· agent 的「操作手册」，角色干活时按需翻阅</text>
+  <text x="520" y="396" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· openspec 系：proposal→specs→design→tasks</text>
+  <text x="520" y="422" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· （需求怎么一步步变成可执行任务）</text>
+  <text x="520" y="448" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· superpowers 系：写计划 / TDD / 调试 / 验收 SOP</text>
+  <text x="520" y="474" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· aicoding 系 ×8：UI 选型 · 权限 SQL · 库表文档</text>
+  <text x="520" y="500" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· · 浏览器 QA · 文档对账 · 测试复盘</text>
+  <text x="520" y="526" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· zip 整包导入技能库（附带文档不丢失）</text>
+  <rect x="940" y="316" width="390" height="230" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="1135" y="344" font-size="14" fill="#9a3412" text-anchor="middle" font-weight="600">仓库 harness · 制度手册（开工必读）</text>
+  <text x="960" y="370" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· CLAUDE.md 宪法：项目定位 / 模块表 / 保护路径</text>
+  <text x="960" y="396" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· AGENTS.md 协作：角色速查 · Git 策略 · 联动矩阵</text>
+  <text x="960" y="422" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· REVIEW.md 审查关卡：quick 4 关 / full 10 关</text>
+  <text x="960" y="448" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· docs/ 唯一事实源：库表文档只能由工具生成</text>
+  <text x="960" y="474" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· hooks/guard_write.py：保护路径写入直接拦截</text>
+  <text x="960" y="500" font-size="12" fill="#374151" text-anchor="start" font-weight="400">· （配置/SQL/pom 等，变更须设计声明+审查）</text>
+  <rect x="60" y="578" width="390" height="54" rx="27" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="255" y="600" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="600">铁律 ①  写库 SQL 永不执行</text>
+  <text x="255" y="620" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">ddl / 权限脚本只由人执行，agent 只生成与判读</text>
+  <rect x="500" y="578" width="390" height="54" rx="27" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="695" y="600" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="600">铁律 ②  文档是唯一权威源</text>
+  <text x="695" y="620" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">docs/ 与代码对不上？周级对账 autopilot 自动纠偏</text>
+  <rect x="940" y="578" width="390" height="54" rx="27" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="1135" y="600" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="600">铁律 ③  密钥永不落盘</text>
+  <text x="1135" y="620" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400">密码 / token 只走环境变量：人注入，agent 进程内读</text>
+  <text x="680" y="672" font-size="12" fill="#9ca3af" text-anchor="middle" font-weight="400">技术栈速览：Multica = Go 后端 + PostgreSQL + 本机 Runtime 守护进程（拉起 Claude Code 等 agent CLI）· MR 走 GitLab API（Closes {issue} 自动关单）· autopilot 由 cron 定时触发</text>
+</svg>

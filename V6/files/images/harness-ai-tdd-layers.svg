@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+<style>
+text { font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif; }
+</style>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#6b7280"/></marker>
+<marker id="ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#16a34a"/></marker>
+<filter id="sh"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.06"/></filter>
+</defs>
+<rect width="1000" height="600" fill="#ffffff"/>
+<text x="500" y="28" text-anchor="middle" fill="#111827" font-size="17" font-weight="600">阶段④ — 编码实施：6 层同时约束 AI 写代码</text>
+
+<!-- Central TDD Cycle -->
+<!-- Red: Write failing test -->
+<rect x="360" y="60" width="280" height="80" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2" filter="url(#sh)"/>
+<circle cx="380" cy="82" r="10" fill="#ef4444"/>
+<text x="398" y="87" fill="#991b1b" font-size="13" font-weight="600">1. 写失败测试</text>
+<text x="390" y="106" fill="#b91c1c" font-size="11">AI 先写测试代码，不写生产代码</text>
+<text x="390" y="122" fill="#dc2626" font-size="10">模型路由 → sonnet（标准实现）</text>
+
+<!-- Arrow Red→Red2 -->
+<line x1="500" y1="140" x2="500" y2="158" stroke="#ef4444" stroke-width="2" marker-end="url(#a)"/>
+
+<!-- Red2: Confirm failing -->
+<rect x="360" y="160" width="280" height="60" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+<circle cx="380" cy="182" r="10" fill="#ef4444"/>
+<text x="398" y="186" fill="#991b1b" font-size="12" font-weight="600">2. 跑测试 — 确认失败</text>
+<text x="390" y="204" fill="#b91c1c" font-size="10">Hook: run_checks.sh 自动编译检查 | 测试失败 = 符合预期</text>
+
+<!-- Arrow Red2→Green -->
+<line x1="500" y1="220" x2="500" y2="240" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+
+<!-- Green: Write implementation -->
+<rect x="300" y="242" width="400" height="120" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#sh)"/>
+<circle cx="320" cy="264" r="10" fill="#16a34a"/>
+<text x="338" y="268" fill="#166534" font-size="13" font-weight="600">3. 写最小实现 — 6 层同时工作</text>
+
+<!-- Layer annotations inside Green box -->
+<rect x="315" y="280" width="180" height="18" rx="3" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+<text x="320" y="293" fill="#166534" font-size="9">L4 领域：springboot/jpa 技能激活</text>
+
+<rect x="505" y="280" width="185" height="18" rx="3" fill="#ffffff" stroke="#bbf7d0" stroke-width="1"/>
+<text x="510" y="293" fill="#166534" font-size="9">L5 工具：LSP goto_def + AST 搜索</text>
+
+<rect x="315" y="302" width="180" height="18" rx="3" fill="#ffffff" stroke="#ede9fe" stroke-width="1"/>
+<text x="320" y="315" fill="#7c3aed" font-size="9">L6 学习：参考历史本能"上次踩过坑"</text>
+
+<rect x="505" y="302" width="185" height="18" rx="3" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+<text x="510" y="315" fill="#991b1b" font-size="9">Hooks: guard_write 保护文件检查</text>
+
+<text x="500" y="345" text-anchor="middle" fill="#15803d" font-size="10">AI 按领域规范写代码，不凭猜测</text>
+<text x="500" y="357" text-anchor="middle" fill="#22c55e" font-size="9">知道 Entity 禁 Lombok | Service 继 BaseServiceManager | DTO 单一规范</text>
+
+<!-- Arrow Green→Green2 -->
+<line x1="500" y1="362" x2="500" y2="382" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+
+<!-- Green2: Confirm passing -->
+<rect x="360" y="384" width="280" height="60" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+<circle cx="380" cy="406" r="10" fill="#16a34a"/>
+<text x="398" y="410" fill="#166534" font-size="12" font-weight="600">4. 跑测试 — 确认通过</text>
+<text x="390" y="428" fill="#15803d" font-size="10">Hook: run_checks.sh 自动编译检查 | 测试通过 = 可以继续</text>
+
+<!-- Arrow Green2→Blue -->
+<line x1="500" y1="444" x2="500" y2="464" stroke="#6b7280" stroke-width="2" marker-end="url(#a)"/>
+
+<!-- Blue: Commit -->
+<rect x="360" y="466" width="280" height="60" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" filter="url(#sh)"/>
+<circle cx="380" cy="488" r="10" fill="#3b82f6"/>
+<text x="398" y="492" fill="#1d4ed8" font-size="12" font-weight="600">5. 提交</text>
+<text x="390" y="510" fill="#2563eb" font-size="10">Hook: ensure_change_context.py | 更新 checkpoint + checkbox</text>
+<text x="390" y="522" fill="#3b82f6" font-size="9">自动 git commit（HyperSpec 模式）</text>
+
+<!-- Left side: Layer activation summary -->
+<rect x="20" y="60" width="255" height="470" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+<text x="148" y="82" text-anchor="middle" fill="#374151" font-size="12" font-weight="600">各层在 TDD 循环中的角色</text>
+
+<rect x="32" y="94" width="230" height="48" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+<text x="42" y="112" fill="#15803d" font-size="10" font-weight="600">L2 纪律层</text>
+<text x="42" y="128" fill="#22c55e" font-size="9">强制先写测试再写实现，5 步缺一不可</text>
+
+<rect x="32" y="150" width="230" height="48" rx="5" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+<text x="42" y="168" fill="#c2410c" font-size="10" font-weight="600">L4 领域层</text>
+<text x="42" y="184" fill="#ea580c" font-size="9">按文件类型激活：Entity→jpa, Controller→springboot</text>
+
+<rect x="32" y="206" width="230" height="48" rx="5" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
+<text x="42" y="224" fill="#7c3aed" font-size="10" font-weight="600">L5 工具层</text>
+<text x="42" y="240" fill="#8b5cf6" font-size="9">LSP 看类型定义，AST 搜索代码模式</text>
+
+<rect x="32" y="262" width="230" height="48" rx="5" fill="#ede9fe" stroke="#a78bfa" stroke-width="1"/>
+<text x="42" y="280" fill="#6d28d9" font-size="10" font-weight="600">L6 学习层</text>
+<text x="42" y="296" fill="#7c3aed" font-size="9">参考本能："这个 Service 要用工厂获取"</text>
+
+<rect x="32" y="318" width="230" height="48" rx="5" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+<text x="42" y="336" fill="#dc2626" font-size="10" font-weight="600">L7 编排层</text>
+<text x="42" y="352" fill="#ef4444" font-size="9">推进 checkpoint，选择执行模式（并行/串行）</text>
+
+<rect x="32" y="374" width="230" height="48" rx="5" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+<text x="42" y="392" fill="#374151" font-size="10" font-weight="600">安全保护层</text>
+<text x="42" y="408" fill="#6b7280" font-size="9">guard_write 拦截危险写入，run_checks 编译</text>
+
+<rect x="32" y="430" width="230" height="48" rx="5" fill="#f0fdfa" stroke="#5eead4" stroke-width="1"/>
+<text x="42" y="448" fill="#0f766e" font-size="10" font-weight="600">模型路由层</text>
+<text x="42" y="464" fill="#0d9488" font-size="9">标准实现用 sonnet，复杂问题升级 opus</text>
+
+<!-- Right side: AI inner monologue -->
+<rect x="725" y="60" width="255" height="470" rx="8" fill="#fefce8" stroke="#fde047" stroke-width="1"/>
+<text x="853" y="82" text-anchor="middle" fill="#854d0e" font-size="12" font-weight="600">AI 的"内心独白"</text>
+
+<rect x="737" y="94" width="230" height="62" rx="5" fill="#ffffff" stroke="#fde047" stroke-width="1"/>
+<text x="747" y="112" fill="#15803d" font-size="10" font-weight="600">L2 纪律层在说：</text>
+<text x="747" y="128" fill="#166534" font-size="9">"我不能直接写代码，</text>
+<text x="747" y="142" fill="#166534" font-size="9">必须先写失败的测试"</text>
+
+<rect x="737" y="164" width="230" height="62" rx="5" fill="#ffffff" stroke="#fde047" stroke-width="1"/>
+<text x="747" y="182" fill="#c2410c" font-size="10" font-weight="600">L4 领域层在说：</text>
+<text x="747" y="198" fill="#9a3412" font-size="9">"Entity 禁用 Lombok，Service</text>
+<text x="747" y="212" fill="#9a3412" font-size="9">要继承 BaseServiceManager"</text>
+
+<rect x="737" y="234" width="230" height="62" rx="5" fill="#ffffff" stroke="#fde047" stroke-width="1"/>
+<text x="747" y="252" fill="#7c3aed" font-size="10" font-weight="600">L5 工具层在说：</text>
+<text x="747" y="268" fill="#6d28d9" font-size="9">"我看到了这个类的实际</text>
+<text x="747" y="282" fill="#6d28d9" font-size="9">依赖关系，不是猜的"</text>
+
+<rect x="737" y="304" width="230" height="62" rx="5" fill="#ffffff" stroke="#fde047" stroke-width="1"/>
+<text x="747" y="322" fill="#6d28d9" font-size="10" font-weight="600">L6 学习层在说：</text>
+<text x="747" y="338" fill="#7c3aed" font-size="9">"上次踩过坑，这个字段改了</text>
+<text x="747" y="352" fill="#7c3aed" font-size="9">要同步改另一个表"</text>
+
+<rect x="737" y="374" width="230" height="62" rx="5" fill="#ffffff" stroke="#fde047" stroke-width="1"/>
+<text x="747" y="392" fill="#374151" font-size="10" font-weight="600">安全保护层在说：</text>
+<text x="747" y="408" fill="#6b7280" font-size="9">"不能写 application.yml，</text>
+<text x="747" y="422" fill="#6b7280" font-size="9">不能没有 change 就改代码"</text>
+
+<rect x="737" y="444" width="230" height="62" rx="5" fill="#ffffff" stroke="#fde047" stroke-width="1"/>
+<text x="747" y="462" fill="#0f766e" font-size="10" font-weight="600">模型路由层在说：</text>
+<text x="747" y="478" fill="#0d9488" font-size="9">"写 Entity 字段用 sonnet</text>
+<text x="747" y="492" fill="#0d9488" font-size="9">就够了，不需要 opus"</text>
+</svg>

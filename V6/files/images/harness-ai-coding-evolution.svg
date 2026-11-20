@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720">
+<style>
+text { font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif; }
+</style>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#6b7280"/></marker>
+<marker id="ab" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2563eb"/></marker>
+<filter id="sh"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.06"/></filter>
+<linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fef3c7"/><stop offset="100%" stop-color="#fef9c3"/></linearGradient>
+<linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#ede9fe"/></linearGradient>
+<linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#f0fdf4"/><stop offset="100%" stop-color="#ecfdf5"/></linearGradient>
+</defs>
+<rect width="1000" height="720" fill="#ffffff"/>
+<text x="500" y="28" text-anchor="middle" fill="#111827" font-size="17" font-weight="600">AI Coding 的演化之路：从 Prompt 到 Harness</text>
+
+<!-- Section 1: Three Paradigm Shifts -->
+<text x="500" y="58" text-anchor="middle" fill="#6b7280" font-size="11">三次范式跃迁</text>
+
+<!-- Prompt Engineering -->
+<rect x="30" y="68" width="290" height="130" rx="10" fill="#fffbeb" stroke="#fbbf24" stroke-width="1.5" filter="url(#sh)"/>
+<rect x="30" y="68" width="290" height="28" rx="10" fill="#fef3c7" stroke="#fbbf24" stroke-width="1.5"/>
+<rect x="30" y="82" width="290" height="14" fill="#fef3c7"/>
+<text x="175" y="88" text-anchor="middle" fill="#92400e" font-size="13" font-weight="700">Prompt Engineering</text>
+<text x="175" y="88" text-anchor="middle" fill="#92400e" font-size="13" font-weight="700">Prompt Engineering</text>
+<text x="42" y="112" fill="#78350f" font-size="11" font-weight="600">核心问题：跟 AI 说什么？</text>
+<text x="42" y="130" fill="#92400e" font-size="10">- 零样本 / 少样本提示</text>
+<text x="42" y="145" fill="#92400e" font-size="10">- 思维链（CoT）引导推理</text>
+<text x="42" y="160" fill="#92400e" font-size="10">- 角色扮演、提示链</text>
+<text x="42" y="178" fill="#b45309" font-size="9" font-style="italic">模型够强后，边际效益降低</text>
+<text x="175" y="195" text-anchor="middle" fill="#d97706" font-size="9">2023-2024 主流</text>
+
+<!-- Arrow 1→2 -->
+<line x1="324" y1="133" x2="350" y2="133" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="337" y="126" text-anchor="middle" fill="#9ca3af" font-size="9">模型</text>
+<text x="337" y="140" text-anchor="middle" fill="#9ca3af" font-size="9">够强了</text>
+
+<!-- Context Engineering -->
+<rect x="355" y="68" width="290" height="130" rx="10" fill="#eff6ff" stroke="#60a5fa" stroke-width="1.5" filter="url(#sh)"/>
+<rect x="355" y="68" width="290" height="28" rx="10" fill="#dbeafe" stroke="#60a5fa" stroke-width="1.5"/>
+<rect x="355" y="82" width="290" height="14" fill="#dbeafe"/>
+<text x="500" y="88" text-anchor="middle" fill="#1e3a5f" font-size="13" font-weight="700">Context Engineering</text>
+<text x="367" y="112" fill="#1e3a5f" font-size="11" font-weight="600">核心问题：AI 该知道什么？</text>
+<text x="367" y="130" fill="#1d4ed8" font-size="10">- RAG 检索增强生成</text>
+<text x="367" y="145" fill="#1d4ed8" font-size="10">- 上下文压缩、滚动摘要</text>
+<text x="367" y="160" fill="#1d4ed8" font-size="10">- 单一事实来源（SSOT）</text>
+<text x="367" y="178" fill="#2563eb" font-size="9" font-style="italic">信息够了，但行为仍不可控</text>
+<text x="500" y="195" text-anchor="middle" fill="#3b82f6" font-size="9">2024-2025 兴起</text>
+
+<!-- Arrow 2→3 -->
+<line x1="649" y1="133" x2="675" y2="133" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="662" y="126" text-anchor="middle" fill="#9ca3af" font-size="9">Agent</text>
+<text x="662" y="140" text-anchor="middle" fill="#9ca3af" font-size="9">失控了</text>
+
+<!-- Harness Engineering -->
+<rect x="680" y="68" width="290" height="130" rx="10" fill="#f0fdf4" stroke="#4ade80" stroke-width="1.5" filter="url(#sh)"/>
+<rect x="680" y="68" width="290" height="28" rx="10" fill="#dcfce7" stroke="#4ade80" stroke-width="1.5"/>
+<rect x="680" y="82" width="290" height="14" fill="#dcfce7"/>
+<text x="825" y="88" text-anchor="middle" fill="#14532d" font-size="13" font-weight="700">Harness Engineering</text>
+<text x="692" y="112" fill="#14532d" font-size="11" font-weight="600">核心问题：系统如何可靠运转？</text>
+<text x="692" y="130" fill="#166534" font-size="10">- 约束（Rule）：不越界</text>
+<text x="692" y="145" fill="#166534" font-size="10">- 规格（Spec）：不跑偏</text>
+<text x="692" y="160" fill="#166534" font-size="10">- 循环（Loop）：可收敛</text>
+<text x="692" y="178" fill="#16a34a" font-size="10">- 驾驭（Harness）：可信任</text>
+<text x="825" y="195" text-anchor="middle" fill="#22c55e" font-size="9">2025-2026 工程化落地</text>
+
+<!-- Nesting relationship -->
+<text x="500" y="222" text-anchor="middle" fill="#374151" font-size="10" font-weight="600">三者是嵌套关系，不是替代关系</text>
+<rect x="60" y="232" width="880" height="36" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1" stroke-dasharray="4,2"/>
+<text x="500" y="254" text-anchor="middle" fill="#166534" font-size="10">Harness 包含 Context 包含 Prompt — 没有好 Prompt，Context 无法被理解；没有好 Context，Harness 在真空中运行</text>
+
+<!-- Section 2: Four-step Progressive Path -->
+<text x="500" y="292" text-anchor="middle" fill="#6b7280" font-size="11">控制面逐层收紧：Rule → Spec → Loop → Harness</text>
+
+<rect x="40" y="304" width="220" height="100" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5" filter="url(#sh)"/>
+<text x="150" y="326" text-anchor="middle" fill="#991b1b" font-size="13" font-weight="700">Rule</text>
+<text x="150" y="346" text-anchor="middle" fill="#b91c1c" font-size="11">不要乱来</text>
+<text x="150" y="365" text-anchor="middle" fill="#dc2626" font-size="9">NEVER / DO NOT 先行</text>
+<text x="150" y="380" text-anchor="middle" fill="#dc2626" font-size="9">让 AI 先学会不越界</text>
+<text x="150" y="398" text-anchor="middle" fill="#fca5a5" font-size="9">→ CLAUDE.md / Hooks</text>
+
+<!-- Arrow -->
+<line x1="264" y1="354" x2="282" y2="354" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+
+<rect x="285" y="304" width="220" height="100" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" filter="url(#sh)"/>
+<text x="395" y="326" text-anchor="middle" fill="#9a3412" font-size="13" font-weight="700">Spec</text>
+<text x="395" y="346" text-anchor="middle" fill="#c2410c" font-size="11">这次只做什么</text>
+<text x="395" y="365" text-anchor="middle" fill="#ea580c" font-size="9">边界明确、范围可控</text>
+<text x="395" y="380" text-anchor="middle" fill="#ea580c" font-size="9">完成条件前置</text>
+<text x="395" y="398" text-anchor="middle" fill="#fdba74" font-size="9">→ OpenSpec 4 工件</text>
+
+<line x1="509" y1="354" x2="527" y2="354" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+
+<rect x="530" y="304" width="220" height="100" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5" filter="url(#sh)"/>
+<text x="640" y="326" text-anchor="middle" fill="#1d4ed8" font-size="13" font-weight="700">Loop</text>
+<text x="640" y="346" text-anchor="middle" fill="#1d4ed8" font-size="11">怎么持续收敛</text>
+<text x="640" y="365" text-anchor="middle" fill="#2563eb" font-size="9">最小改动→验证→记录→下一轮</text>
+<text x="640" y="380" text-anchor="middle" fill="#2563eb" font-size="9">不允许带着失败继续</text>
+<text x="640" y="398" text-anchor="middle" fill="#93c5fd" font-size="9">→ Superpowers TDD 循环</text>
+
+<line x1="754" y1="354" x2="772" y2="354" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+
+<rect x="775" y="304" width="185" height="100" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5" filter="url(#sh)"/>
+<text x="868" y="326" text-anchor="middle" fill="#166534" font-size="13" font-weight="700">Harness</text>
+<text x="868" y="346" text-anchor="middle" fill="#15803d" font-size="11">凭什么被信任</text>
+<text x="868" y="365" text-anchor="middle" fill="#16a34a" font-size="9">约束+验证+评审+放行</text>
+<text x="868" y="380" text-anchor="middle" fill="#16a34a" font-size="9">组织级治理</text>
+<text x="868" y="398" text-anchor="middle" fill="#86efac" font-size="9">→ 审查层 + 安全保护</text>
+
+<!-- Dependency arrows below -->
+<text x="500" y="428" text-anchor="middle" fill="#6b7280" font-size="9" font-style="italic">没有 Rule → Spec 给无边界 Agent 提需求 | 没有 Spec → Loop 把错误放大 | 没有 Loop → Harness 被动兜底</text>
+
+<!-- Section 3: Methodology as Guardrails -->
+<text x="500" y="452" text-anchor="middle" fill="#6b7280" font-size="11">五大方法论：Vibe Coding 的工程化护栏</text>
+
+<rect x="30" y="462" width="185" height="75" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1" filter="url(#sh)"/>
+<text x="123" y="482" text-anchor="middle" fill="#991b1b" font-size="11" font-weight="600">SDD 规格驱动</text>
+<text x="123" y="498" text-anchor="middle" fill="#b91c1c" font-size="9">战略层 — 做什么</text>
+<text x="123" y="512" text-anchor="middle" fill="#dc2626" font-size="9">规格 = 唯一事实来源</text>
+<text x="123" y="526" text-anchor="middle" fill="#fca5a5" font-size="8">→ OpenSpec</text>
+
+<rect x="225" y="462" width="185" height="75" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1" filter="url(#sh)"/>
+<text x="318" y="482" text-anchor="middle" fill="#9a3412" font-size="11" font-weight="600">DDD 领域驱动</text>
+<text x="318" y="498" text-anchor="middle" fill="#c2410c" font-size="9">架构层 — 怎么组织</text>
+<text x="318" y="512" text-anchor="middle" fill="#ea580c" font-size="9">统一语言 / 限界上下文</text>
+<text x="318" y="526" text-anchor="middle" fill="#fdba74" font-size="8">→ L4 领域知识层</text>
+
+<rect x="420" y="462" width="185" height="75" rx="6" fill="#faf5ff" stroke="#c084fc" stroke-width="1" filter="url(#sh)"/>
+<text x="513" y="482" text-anchor="middle" fill="#6d28d9" font-size="11" font-weight="600">ATDD 验收驱动</text>
+<text x="513" y="498" text-anchor="middle" fill="#7c3aed" font-size="9">验收层 — 行为是否正确</text>
+<text x="513" y="512" text-anchor="middle" fill="#8b5cf6" font-size="9">纯领域语言规格</text>
+<text x="513" y="526" text-anchor="middle" fill="#c084fc" font-size="8">→ specs 工件</text>
+
+<rect x="615" y="462" width="175" height="75" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1" filter="url(#sh)"/>
+<text x="703" y="482" text-anchor="middle" fill="#166534" font-size="11" font-weight="600">TDD 测试驱动</text>
+<text x="703" y="498" text-anchor="middle" fill="#15803d" font-size="9">执行层 — 如何正确实现</text>
+<text x="703" y="512" text-anchor="middle" fill="#22c55e" font-size="9">Red-Green-Refactor</text>
+<text x="703" y="526" text-anchor="middle" fill="#86efac" font-size="8">→ Superpowers</text>
+
+<rect x="800" y="462" width="170" height="75" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1" filter="url(#sh)"/>
+<text x="885" y="482" text-anchor="middle" fill="#1d4ed8" font-size="11" font-weight="600">BDD 行为驱动</text>
+<text x="885" y="498" text-anchor="middle" fill="#2563eb" font-size="9">协作层 — 业务如何描述</text>
+<text x="885" y="512" text-anchor="middle" fill="#3b82f6" font-size="9">跨角色统一语言</text>
+<text x="885" y="526" text-anchor="middle" fill="#93c5fd" font-size="8">→ 需求工件</text>
+
+<!-- Section 4: Harness Architecture Mapping -->
+<text x="500" y="562" text-anchor="middle" fill="#6b7280" font-size="11">演化路径在本架构中的落地</text>
+
+<rect x="30" y="572" width="940" height="136" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" filter="url(#sh)"/>
+
+<!-- Mapping row: Evolution stage → Architecture layer -->
+<text x="70" y="596" fill="#374151" font-size="11" font-weight="600">演化阶段</text>
+<text x="270" y="596" fill="#374151" font-size="11" font-weight="600">架构层</text>
+<text x="530" y="596" fill="#374151" font-size="11" font-weight="600">实现方式</text>
+<text x="820" y="596" fill="#374151" font-size="11" font-weight="600">工具</text>
+
+<line x1="45" y1="602" x2="955" y2="602" stroke="#e5e7eb" stroke-width="1"/>
+
+<!-- Row 1: Rule -->
+<rect x="55" y="608" width="140" height="26" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+<text x="125" y="625" text-anchor="middle" fill="#991b1b" font-size="10" font-weight="600">Rule 不要乱来</text>
+<rect x="210" y="608" width="180" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="300" y="625" text-anchor="middle" fill="#374151" font-size="10">CLAUDE.md + 安全保护层</text>
+<rect x="410" y="608" width="340" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="580" y="625" text-anchor="middle" fill="#6b7280" font-size="10">编码红线 + 文件保护 + guard_write 拦截</text>
+<rect x="770" y="608" width="190" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="865" y="625" text-anchor="middle" fill="#6b7280" font-size="10">CLAUDE.md / Hooks</text>
+
+<!-- Row 2: Spec -->
+<rect x="55" y="640" width="140" height="26" rx="4" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+<text x="125" y="657" text-anchor="middle" fill="#9a3412" font-size="10" font-weight="600">Spec 这次只做什么</text>
+<rect x="210" y="640" width="180" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="300" y="657" text-anchor="middle" fill="#374151" font-size="10">L1 规范层 OpenSpec</text>
+<rect x="410" y="640" width="340" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="580" y="657" text-anchor="middle" fill="#6b7280" font-size="10">proposal → specs → design → tasks 强制顺序</text>
+<rect x="770" y="640" width="190" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="865" y="657" text-anchor="middle" fill="#6b7280" font-size="10">OpenSpec</text>
+
+<!-- Row 3: Loop -->
+<rect x="55" y="672" width="140" height="26" rx="4" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+<text x="125" y="689" text-anchor="middle" fill="#1d4ed8" font-size="10" font-weight="600">Loop 持续收敛</text>
+<rect x="210" y="672" width="180" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="300" y="689" text-anchor="middle" fill="#374151" font-size="10">L2 纪律层 + L7 编排层</text>
+<rect x="410" y="672" width="340" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="580" y="689" text-anchor="middle" fill="#6b7280" font-size="10">TDD 红绿重构 + 12 checkpoint 状态机</text>
+<rect x="770" y="672" width="190" height="26" rx="4" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="865" y="689" text-anchor="middle" fill="#6b7280" font-size="10">Superpowers / HyperSpec</text>
+
+</svg>

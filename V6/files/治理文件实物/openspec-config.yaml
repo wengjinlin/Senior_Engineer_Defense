@@ -1,0 +1,109 @@
+schema: spec-driven
+
+# ============================================================================
+# 项目元信息 (Project Metadata)
+# 说明：OpenSpec 项目级 config.yaml 官方仅解析 schema / context / rules 三个字段。
+#       下方 project / tech_stack / models 仅供留档与工具链读取，不会被
+#       openspec CLI 解析；运行时 AI 上下文以 `context:` 字段为准。
+# ============================================================================
+
+project:
+  name: sunny-qms-service
+  version: 0.0.1-SNAPSHOT
+  type: spring-boot
+  parent: com.sunny:base-platform:0.0.1
+  packaging: jar
+
+# ----------------------------------------------------------------------------
+# 技术栈 (Auto-detected)
+# 探测规则：pom.xml  -> Spring Boot + Java
+#           package.json -> Node.js
+#           requirements.txt -> Python
+# 探测结果：存在 sunny-qms-service/pom.xml -> spring-boot
+# ----------------------------------------------------------------------------
+
+tech_stack:
+  language: java
+  jdk: "1.8"
+  framework: spring-boot
+  spring_cloud: alibaba
+  service_discovery: nacos
+  rpc: openfeign
+  http_client: feign-okhttp
+  web: spring-boot-starter-web
+  servlet_container: tomcat (provided)
+  build_tool: maven
+  pom: sunny-qms-service/pom.xml
+
+# ----------------------------------------------------------------------------
+# 模型路由 (Model Routing)
+# 说明：OpenSpec config 原生不支持模型路由字段。以下为 Claude Code 层约定，
+#       通过 .claude/agents/*.md 或 .claude/settings.json 落地。
+# ----------------------------------------------------------------------------
+# propose : opus     (WHY/提案，需要最强推理)
+# specs   : sonnet   (WHAT/规格，结构化输出)
+# apply   : sonnet   (执行任务，代码生成)
+# archive : haiku    (归档整理，轻量任务)
+
+models:
+  propose: opus
+  specs: sonnet
+  apply: sonnet
+  archive: haiku
+
+# ============================================================================
+# 项目上下文 (Project Context)
+# 官方字段：会被注入到所有 artifact (proposal/specs/design/tasks) 的 AI 指令中。
+# ============================================================================
+
+context: |
+  # sunny-qms-service — 质量管理系统 (QMS)
+
+  - 项目名称: sunny-qms-service
+  - 版本: 0.0.1-SNAPSHOT
+  - 项目类型: spring-boot (单模块 Maven 工程，父 POM: com.sunny:base-platform:0.0.1)
+  - 打包方式: jar
+
+  ## 技术栈
+  - 语言 / JDK: Java 1.8
+  - 核心框架: Spring Boot + Spring Cloud Alibaba
+  - 服务注册/配置: Nacos (spring-cloud-starter-alibaba-nacos-discovery)
+  - 服务调用: OpenFeign + feign-okhttp
+  - Web: spring-boot-starter-web (Tomcat 为 provided，由外部容器或集成部署提供)
+  - AOP / Actuator: spring-boot-starter-aop / actuator
+  - 构建工具: Maven
+
+  ## 协作约定
+  - 全程使用中文交流与中文注释
+  - Maven 调用: "/c/Program Files/JetBrains/IntelliJ IDEA 2025.3/plugins/maven/lib/maven3/bin/mvn.cmd"
+  - JAVA_HOME: /d/jdk1.8.0_171
+  - 计划/任务结束时不需要执行 npm build 进行测试
+  - 提交信息使用 conventional commits (chore / feat / fix / refactor / docs ...)
+
+  ## 工件创建顺序 (必须遵守)
+  proposal → specs → design → tasks
+  口诀: "先需求后设计，先 WHAT 后 HOW"
+  即使多个 artifact 同时显示 ready，也必须按此顺序创建。
+
+# ============================================================================
+# 每个 Artifact 的附加规则 (Per-artifact Rules)
+# ============================================================================
+
+rules:
+  proposal:
+    - 用中文撰写，结构包含：Why / What Changes / Capabilities / Impact / Non-goals
+    - 必须列出"非目标 (Non-goals)"，明确范围边界
+    - 控制在 1~2 页，聚焦"为什么"而非"怎么做"
+  specs:
+    - 每个 Requirement 必须至少一个 Scenario
+    - Scenario 必须使用恰好 4 个井号 (####)
+    - 使用 SHALL / MUST 规范动词，避免 should / may
+    - 修改现有需求时使用 MODIFIED 并复制完整需求块
+  design:
+    - 必须列出"备选方案"与"取舍 (Trade-offs)"
+    - 涉及数据库变更时附迁移与回滚方案
+    - 必须说明每个关键决策的 Why
+  tasks:
+    - 任务粒度控制在 2 小时内
+    - 必须使用 `- [ ] X.Y 描述` 复选框格式
+    - 任务按依赖顺序排列

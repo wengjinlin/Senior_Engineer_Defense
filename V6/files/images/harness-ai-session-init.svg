@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" width="1000" height="550">
+<style>
+text { font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif; }
+</style>
+<defs>
+<marker id="a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#6b7280"/></marker>
+<filter id="sh"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.06"/></filter>
+</defs>
+<rect width="1000" height="550" fill="#ffffff"/>
+<text x="500" y="28" text-anchor="middle" fill="#111827" font-size="17" font-weight="600">阶段① — 会话启动：AI 如何"认识"你的项目</text>
+
+<!-- Entry point -->
+<rect x="390" y="44" width="220" height="36" rx="18" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" filter="url(#sh)"/>
+<text x="500" y="67" text-anchor="middle" fill="#1d4ed8" font-size="13" font-weight="600">开发者打开 Claude Code</text>
+
+<!-- Hook trigger -->
+<line x1="500" y1="80" x2="500" y2="96" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="360" y="98" width="280" height="26" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+<text x="500" y="115" text-anchor="middle" fill="#991b1b" font-size="11" font-weight="600">Hook: SessionStart 触发</text>
+
+<!-- 5 branches -->
+<line x1="500" y1="124" x2="500" y2="138" stroke="#6b7280" stroke-width="1.5"/>
+
+<!-- Branch lines -->
+<line x1="100" y1="138" x2="900" y2="138" stroke="#e5e7eb" stroke-width="1"/>
+<line x1="100" y1="138" x2="100" y2="155" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="280" y1="138" x2="280" y2="155" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="460" y1="138" x2="460" y2="155" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="640" y1="138" x2="640" y2="155" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="820" y1="138" x2="820" y2="155" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+
+<!-- Card 1: AGENTS.md -->
+<rect x="20" y="158" width="160" height="140" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5" filter="url(#sh)"/>
+<text x="100" y="178" text-anchor="middle" fill="#1d4ed8" font-size="12" font-weight="600">读取 AGENTS.md</text>
+<text x="100" y="198" text-anchor="middle" fill="#3b82f6" font-size="10">找到 Harness 入口</text>
+<line x1="35" y1="206" x2="165" y2="206" stroke="#dbeafe" stroke-width="1"/>
+<text x="100" y="222" text-anchor="middle" fill="#6b7280" font-size="9">知道项目使用</text>
+<text x="100" y="236" text-anchor="middle" fill="#6b7280" font-size="9">Harness 工作流</text>
+<rect x="35" y="248" width="130" height="20" rx="3" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+<text x="100" y="262" text-anchor="middle" fill="#1e40af" font-size="9">docs/harness/integration.md</text>
+<text x="100" y="290" text-anchor="middle" fill="#93c5fd" font-size="9">AI 行为指南</text>
+
+<!-- Card 2: CLAUDE.md -->
+<rect x="200" y="158" width="160" height="140" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5" filter="url(#sh)"/>
+<text x="280" y="178" text-anchor="middle" fill="#15803d" font-size="12" font-weight="600">读取 CLAUDE.md</text>
+<text x="280" y="198" text-anchor="middle" fill="#22c55e" font-size="10">加载编码规则</text>
+<line x1="215" y1="206" x2="345" y2="206" stroke="#bbf7d0" stroke-width="1"/>
+<text x="280" y="222" text-anchor="middle" fill="#6b7280" font-size="9">Entity 禁用 Lombok</text>
+<text x="280" y="236" text-anchor="middle" fill="#6b7280" font-size="9">Service 继承 BaseServiceManager</text>
+<text x="280" y="250" text-anchor="middle" fill="#6b7280" font-size="9">DTO 单一规范</text>
+<rect x="215" y="258" width="130" height="20" rx="3" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+<text x="280" y="272" text-anchor="middle" fill="#166534" font-size="9">TDD 是强制约束</text>
+<text x="280" y="290" text-anchor="middle" fill="#86efac" font-size="9">编码红线</text>
+
+<!-- Card 3: Skills check -->
+<rect x="380" y="158" width="160" height="140" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" filter="url(#sh)"/>
+<text x="460" y="178" text-anchor="middle" fill="#c2410c" font-size="12" font-weight="600">using-superpowers</text>
+<text x="460" y="198" text-anchor="middle" fill="#ea580c" font-size="10">技能自检</text>
+<line x1="395" y1="206" x2="525" y2="206" stroke="#fed7aa" stroke-width="1"/>
+<text x="460" y="222" text-anchor="middle" fill="#6b7280" font-size="9">扫描 .claude/skills/</text>
+<text x="460" y="236" text-anchor="middle" fill="#6b7280" font-size="9">56+ 技能 + 18+ 工具</text>
+<rect x="395" y="248" width="130" height="20" rx="3" fill="#ffffff" stroke="#fdba74" stroke-width="1"/>
+<text x="460" y="262" text-anchor="middle" fill="#9a3412" font-size="9">springboot/jpa/api ...</text>
+<text x="460" y="290" text-anchor="middle" fill="#fdba74" font-size="9">能力清单</text>
+
+<!-- Card 4: Instincts -->
+<rect x="560" y="158" width="160" height="140" rx="8" fill="#faf5ff" stroke="#c084fc" stroke-width="1.5" filter="url(#sh)"/>
+<text x="640" y="178" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="600">ECC 本能系统</text>
+<text x="640" y="198" text-anchor="middle" fill="#8b5cf6" font-size="10">加载历史知识</text>
+<line x1="575" y1="206" x2="705" y2="206" stroke="#e9d5ff" stroke-width="1"/>
+<text x="640" y="222" text-anchor="middle" fill="#6b7280" font-size="9">读取 .claude/instincts/</text>
+<text x="640" y="236" text-anchor="middle" fill="#6b7280" font-size="9">"上次改这个字段出问题"</text>
+<text x="640" y="250" text-anchor="middle" fill="#6b7280" font-size="9">"这个 Service 用工厂获取"</text>
+<rect x="575" y="258" width="130" height="20" rx="3" fill="#ede9fe" stroke="#c084fc" stroke-width="1"/>
+<text x="640" y="272" text-anchor="middle" fill="#6d28d9" font-size="9">跨会话知识积累</text>
+<text x="640" y="290" text-anchor="middle" fill="#c084fc" font-size="9">历史记忆</text>
+
+<!-- Card 5: HyperSpec state -->
+<rect x="740" y="158" width="160" height="140" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5" filter="url(#sh)"/>
+<text x="820" y="178" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="600">HyperSpec</text>
+<text x="820" y="198" text-anchor="middle" fill="#ef4444" font-size="10">状态检测</text>
+<line x1="755" y1="206" x2="885" y2="206" stroke="#fecaca" stroke-width="1"/>
+<text x="820" y="222" text-anchor="middle" fill="#6b7280" font-size="9">读取 .hyperspec-state.yaml</text>
+<text x="820" y="236" text-anchor="middle" fill="#6b7280" font-size="9">检测未完成的 checkpoint</text>
+<rect x="755" y="248" width="130" height="20" rx="3" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+<text x="820" y="262" text-anchor="middle" fill="#991b1b" font-size="9">"上次中断在 task-3"</text>
+<text x="820" y="290" text-anchor="middle" fill="#fca5a5" font-size="9">断点恢复</text>
+
+<!-- Convergence line -->
+<line x1="100" y1="298" x2="100" y2="318" stroke="#6b7280" stroke-width="1"/>
+<line x1="280" y1="298" x2="280" y2="318" stroke="#6b7280" stroke-width="1"/>
+<line x1="460" y1="298" x2="460" y2="318" stroke="#6b7280" stroke-width="1"/>
+<line x1="640" y1="298" x2="640" y2="318" stroke="#6b7280" stroke-width="1"/>
+<line x1="820" y1="298" x2="820" y2="318" stroke="#6b7280" stroke-width="1"/>
+<line x1="100" y1="318" x2="820" y2="318" stroke="#6b7280" stroke-width="1.5"/>
+<line x1="460" y1="318" x2="460" y2="336" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+
+<!-- Result -->
+<rect x="280" y="338" width="440" height="42" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5" filter="url(#sh)"/>
+<text x="500" y="357" text-anchor="middle" fill="#15803d" font-size="13" font-weight="600">AI 已"认识"项目，建立完整认知</text>
+<text x="500" y="373" text-anchor="middle" fill="#22c55e" font-size="10">像一个已经入职的团队成员，知道规矩、知道技术栈、知道历史教训</text>
+
+<!-- Bottom: AI brain summary -->
+<text x="500" y="415" text-anchor="middle" fill="#374151" font-size="12" font-weight="600">此时 AI 的"大脑"里有什么</text>
+
+<rect x="60" y="428" width="180" height="60" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+<text x="150" y="448" text-anchor="middle" fill="#1d4ed8" font-size="11" font-weight="600">编码规范</text>
+<text x="150" y="464" text-anchor="middle" fill="#3b82f6" font-size="9">分层规则 + 禁用项 + 平台包</text>
+<text x="150" y="480" text-anchor="middle" fill="#3b82f6" font-size="9">TDD 强约束 + 审查流程</text>
+
+<rect x="260" y="428" width="180" height="60" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+<text x="350" y="448" text-anchor="middle" fill="#c2410c" font-size="11" font-weight="600">技能清单</text>
+<text x="350" y="464" text-anchor="middle" fill="#ea580c" font-size="9">56+ 领域技能（springboot/jpa）</text>
+<text x="350" y="480" text-anchor="middle" fill="#ea580c" font-size="9">18+ MCP 工具（LSP/AST）</text>
+
+<rect x="460" y="428" width="180" height="60" rx="6" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
+<text x="550" y="448" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="600">历史知识</text>
+<text x="550" y="464" text-anchor="middle" fill="#8b5cf6" font-size="9">隐性约定 + 踩坑经验</text>
+<text x="550" y="480" text-anchor="middle" fill="#8b5cf6" font-size="9">团队偏好 + API 变更</text>
+
+<rect x="660" y="428" width="180" height="60" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+<text x="750" y="448" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="600">工作状态</text>
+<text x="750" y="464" text-anchor="middle" fill="#ef4444" font-size="9">当前变更（有/无）</text>
+<text x="750" y="480" text-anchor="middle" fill="#ef4444" font-size="9">断点位置（可恢复）</text>
+</svg>
